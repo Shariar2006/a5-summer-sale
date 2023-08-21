@@ -38,7 +38,7 @@
 <body>
     <header>
         <div
-            class="mx-auto bg-header-bg grid grid-cols-2 lg:gap-5 justify-between text-center items-center  lg:py-14 w-[320px] md:w-[760px] lg:w-[1800px]">
+            class="container mx-auto bg-header-bg grid grid-cols-2 lg:gap-5 justify-between text-center items-center  lg:py-14 w-[320px] md:w-[760px] lg:w-[1440px]">
             <div>
                 <h3 class="md:text-xl lg:text-3xl font-medium font text-black">---SALE FEVER---</h3>
                 <h1 class="md:text-4xl lg:text-6xl text-black font font-medium lg:font-bold lg:my-14">Purchase TK 200 or
@@ -55,23 +55,20 @@
         </div>
     </header>
 
-    <main class="mx-auto bg-gray-100 w-[320px] md:w-[760px] lg:w-[1800px]">
-
-
-
-        <div class="p-32">
-            <div class="flex flex-1 gap-32">
+    <main class="container mx-auto bg-gray-100 w-[320px] md:w-[760px] lg:w-[1440px]">
+        <div class="lg:p-10">
+            <div class="block lg:flex gap-10">
 
                 <div>
-                    <h1 class="text-4xl font font-semibold mb-5">Kitchenware</h1>
-                    <div class="grid gap-6 grid-cols-3">
-                        <div onclick="KAccessories()" >
-                            <div class="card w-80 bg-base-100 p-4 shadow-xl">
+                    <h1 class="text-2xl md:text-3xl lg:text-4xl font font-semibold pt-5 mb-5">Kitchenware</h1>
+                    <div class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                        <div onclick="handleClickBtn('product1', 'product1-price', 'total')">
+                            <div class="card w-72 bg-base-100 p-4 shadow-xl">
                                 <figure class="bg-gray-100 px-10 py-9">
                                     <img src="images/prod1.png" alt="Shoes" class="rounded-xl" />
                                 </figure>
                                 <div class="card-body items-center text-center">
-    
+
                                     <div class="rating">
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
@@ -80,19 +77,19 @@
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                     </div>
-    
-                                    <h2 class="text-xl font-semibold card-title font">K. Accessories</h2>
-                                    <p class="text-xl font-normal font">39.00 TK</p>
+
+                                    <h2 class="text-xl font-semibold card-title font" id="product1">K. Accessories</h2>
+                                    <p class="text-xl font-normal font"> <span id="product1-price">39</span>.00 TK</p>
                                 </div>
                             </div>
                         </div>
-                        <div onclick="CAccessories()" >
-                            <div class="card w-80 bg-base-100 p-4 shadow-xl">
+                        <div onclick="handleClickBtn('product2', 'product2-price', 'total')">
+                            <div class="card w-72 bg-base-100 p-4 shadow-xl">
                                 <figure class="bg-gray-100 px-10 py-8">
                                     <img src="images/prod2.png" alt="Shoes" class="rounded-xl" />
                                 </figure>
                                 <div class="card-body items-center text-center">
-    
+
                                     <div class="rating">
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
@@ -101,19 +98,19 @@
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                     </div>
-    
-                                    <h2 class="text-xl font-semibold card-title font">C. Accessories</h2>
-                                    <p class="text-xl font-normal font">25.00 TK</p>
+
+                                    <h2 class="text-xl font-semibold card-title font" id="product2">C. Accessories</h2>
+                                    <p class="text-xl font-normal font"><span id="product2-price">25</span>.00 TK</p>
                                 </div>
                             </div>
                         </div>
-                        <div onclick="homeCooker()" >
-                            <div class="card w-80 bg-base-100 p-4 shadow-xl">
+                        <div onclick="handleClickBtn('product3', 'product3-price', 'total')">
+                            <div class="card w-72 bg-base-100 p-4 shadow-xl">
                                 <figure class="bg-gray-100 px-10 py-9">
                                     <img src="images/prod3.png" alt="Shoes" class="rounded-xl" />
                                 </figure>
                                 <div class="card-body items-center text-center">
-    
+
                                     <div class="rating">
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
@@ -122,22 +119,22 @@
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                     </div>
-    
-                                    <h2 class="text-xl font-semibold card-title font">Home Cooker</h2>
-                                    <p class="text-xl font-normal font">49.00 TK</p>
+
+                                    <h2 class="text-xl font-semibold card-title font" id="product3">Home Cooker</h2>
+                                    <p class="text-xl font-normal font"><span id="product3-price">49</span>.00 TK</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <h1 class="text-4xl font font-semibold my-7">Sportswear</h1>
-                    <div class="grid gap-6 grid-cols-3">
-                        <div onclick="sportsBackCap()" >
-                            <div class="card w-80 bg-base-100 p-4 shadow-xl">
+                    <h1 class="text-3xl lg:text-4xl font font-semibold my-7">Sportswear</h1>
+                    <div class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                        <div onclick="handleClickBtn('product4', 'product4-price', 'total')">
+                            <div class="card w-72 bg-base-100 p-4 shadow-xl">
                                 <figure class="bg-gray-100 px-10 py-10">
                                     <img src="images/prod4.png" alt="Shoes" class="rounded-xl" />
                                 </figure>
                                 <div class="card-body items-center text-center">
-    
+
                                     <div class="rating">
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
@@ -146,19 +143,19 @@
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                     </div>
-    
-                                    <h2 class="text-xl font-semibold card-title font">Sports Back Cap</h2>
-                                    <p class="text-xl font-normal font">49.00 TK</p>
+
+                                    <h2 class="text-xl font-semibold card-title font" id="product4">Sports Back Cap</h2>
+                                    <p class="text-xl font-normal font"><span id="product4-price">49</span>.00 TK</p>
                                 </div>
                             </div>
                         </div>
-                        <div onclick="fullJerseySet()" >
-                            <div class="card w-80 bg-base-100 p-4 shadow-xl">
+                        <div onclick="handleClickBtn('product5', 'product5-price', 'total')">
+                            <div class="card w-72 bg-base-100 p-4 shadow-xl">
                                 <figure class="bg-gray-100 px-10 py-8">
                                     <img src="images/prod5.png" alt="Shoes" class="rounded-xl" />
                                 </figure>
                                 <div class="card-body items-center text-center">
-    
+
                                     <div class="rating">
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
@@ -167,19 +164,19 @@
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                     </div>
-    
-                                    <h2 class="text-xl font-semibold card-title font">Full Jersey Set</h2>
-                                    <p class="text-xl font-normal font">69.00 TK</p>
+
+                                    <h2 class="text-xl font-semibold card-title font" id="product5">Full Jersey Set</h2>
+                                    <p class="text-xl font-normal font"><span id="product5-price">69</span>.00 TK</p>
                                 </div>
                             </div>
                         </div>
-                        <div onclick="sportsCates()" >
-                            <div class="card w-80 bg-base-100 p-4 shadow-xl">
+                        <div onclick="handleClickBtn('product6', 'product6-price', 'total')">
+                            <div class="card w-72 bg-base-100 p-4 shadow-xl">
                                 <figure class="bg-gray-100 px-10 py-7">
                                     <img src="images/prod6.png" alt="Shoes" class="rounded-xl" />
                                 </figure>
                                 <div class="card-body items-center text-center">
-    
+
                                     <div class="rating">
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
@@ -188,27 +185,34 @@
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                     </div>
-    
-                                    <h2 class="text-xl font-semibold card-title font">Sports cates</h2>
-                                    <p class="text-xl font-normal font">159.00 TK</p>
+
+                                    <h2 class="text-xl font-semibold card-title font" id="product6">Sports cates</h2>
+                                    <p class="text-xl font-normal font"><span id="product6-price">159</span>.00 TK</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="mt-16">
+                    
                     <div class="bg-white rounded-xl p-4">
                         <h2 class="text-2xl font font-medium m-2">Have coupon?</h2>
-                        <input class="text-xl font font-medium bg-gray-200 p-3 rounded-s-lg" type="text" placeholder="Coupon code" name="" id=""><button class="bg-comon-color text-xl text-white p-3 font font-medium rounded-e-lg">Apply</button>
+                        <input class="text-xl font font-medium bg-gray-200 p-2 lg:p-3 rounded-s-lg w-[210px] lg:w-[288px]" type="text"
+                            placeholder="Coupon code" name="" id="inputFild"><button disabled = 'disabled'
+                            class="btn bg-comon-color text-xl text-white p-2 lg:p-3 font font-medium rounded-e-lg" id="applyBtn">Apply</button>
                     </div>
-                    <div class="bg-white rounded-xl p-4 mt-9">
-                        <p class="text-2xl font-medium font text-black">Total price:</p>
-                        <p class="text-2xl font-medium font text-black">Discount :</p>
-                        <p class="text-2xl font-medium font text-black mb-28">Total: </p>
+                    <div class="bg-white rounded-xl p-4 mt-8">
+                        <ol class="list-decimal my-3 text-xl font-semibold p-4" id="select-items"></ol>
+                        <hr>
+                        <p class="text-2xl font-medium font text-black">Total price: <span id="total">00</span></p>
+                        <p class="text-2xl font-medium font text-black">Discount: <span id="discount">00</span></p>
+                        <p class="text-2xl font-medium font text-black mb-28">Total: <span id="grandtotal">00</span></p>
 
                     </div>
                     <div class="absolute -mt-7">
-                        <button class="text-xl text-white rounded-xl items-center justify-center font font-semibold bg-comon-color w-80 py-3  ml-12 ">Make Purchase</button>
+                        <button disabled = 'disabled'
+                            class="btn text-xl text-white rounded-xl items-center justify-center font font-semibold bg-comon-color w-72 py-3 lg:ml-12 " id="makePurchaseBtn">Make
+                            Purchase</button>
                     </div>
                 </div>
             </div>
