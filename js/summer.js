@@ -1,7 +1,10 @@
 let total = 0;
-function handleClickBtn(productName, productPrice, totalField){
+const elementGrandtotal = document.getElementById('grandtotal');
+const grandtotalString = elementGrandtotal.innerText;
+const grandtotal = parseFloat(grandtotalString);
+const selectItems = document.getElementById('select-items');
+function handleClickBtn(productName, productPrice, totalField) {
     const productTotal = document.getElementById('total');
-    const selectItems = document.getElementById('select-items');
     const titleElement = document.getElementById(productName);
     const titleString = titleElement.innerText;
     const li = document.createElement('li');
@@ -13,40 +16,57 @@ function handleClickBtn(productName, productPrice, totalField){
     const ElementPriceString = ElementPrice.innerText;
     const price = parseFloat(ElementPriceString);
 
-    const elementTotalPrice = document.getElementById(totalField); 
+    const elementTotalPrice = document.getElementById(totalField);
     const totalPriceString = elementTotalPrice.innerText;
     const totalPrice = parseFloat(totalPriceString);
 
     total = price + total;
     elementTotalPrice.innerText = total;
 
-    const elementGrandtotal = document.getElementById('grandtotal');
-    const grandtotalString = elementGrandtotal.innerText;
-    const grandtotal = parseFloat(grandtotalString);
     elementGrandtotal.innerText = total;
 
-    const inputFild = document.getElementById('inputFild')
-    const coponCode = inputFild.value;
+    const inputField = document.getElementById('inputField')
+    const couponCode = inputField.value;
     const applyBtn = document.getElementById('applyBtn');
-    if(total > 200){
-        applyBtn.removeAttribute('disabled','disabled')
+    if (total >= 200) {
+        applyBtn.removeAttribute('disabled', 'disabled')
     }
-    else{
-        applyBtn.setAttribute('disabled','disabled') 
+    else {
+        applyBtn.setAttribute('disabled', 'disabled')
     }
-    
+
     const makePurchaseBtn = document.getElementById('makePurchaseBtn')
-    if(elementTotalPrice.innerText > 0){
-        makePurchaseBtn.removeAttribute('disabled','disabled')
+    if (elementTotalPrice.innerText > 0) {
+        makePurchaseBtn.removeAttribute('disabled', 'disabled')
     }
-    else{
-        makePurchaseBtn.setAttribute('disabled','disabled')
+    else {
+        makePurchaseBtn.setAttribute('disabled', 'disabled')
     }
-    if(total > 200){
+
+
+}
+
+function applycoupon() {
+    const inputField = document.getElementById('inputField')
+    if (total >= 200 && inputField.value === 'SELL200') {
         const discountPrice = document.getElementById('discount');
-        const discountProcess = (total * 20)/100;
+        const discountProcess = (total * 20) / 100;
         discountPrice.innerText = discountProcess
+        const discount = total - discountProcess;
+        elementGrandtotal.innerText = discount;
     }
+        else{
+            alert("Please provide a valid coupon");
+        }
 
-
+}
+function goHome(){
+    const total = document.getElementById("total");
+    const discount = document.getElementById("discount")
+    const inputField = document.getElementById('inputField')
+    selectItems.innerText = ""
+    total.innerText = "00";
+    elementGrandtotal.innerText = "00";
+    discount.innerText = "00";
+    inputField.value = "";
 }

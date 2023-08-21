@@ -198,8 +198,8 @@
                     <div class="bg-white rounded-xl p-4">
                         <h2 class="text-2xl font font-medium m-2">Have coupon?</h2>
                         <input class="text-xl font font-medium bg-gray-200 p-2 lg:p-3 rounded-s-lg w-[210px] lg:w-[288px]" type="text"
-                            placeholder="Coupon code" name="" id="inputFild"><button disabled = 'disabled'
-                            class="btn bg-comon-color text-xl text-white p-2 lg:p-3 font font-medium rounded-e-lg" id="applyBtn">Apply</button>
+                            placeholder="Coupon code" name="" id="inputField"><button onclick="applycoupon()" disabled = 'disabled'
+                            class="btn bg-comon-color text-xl text-white p-2 lg:p-3 font font-medium rounded-s-lg" id="applyBtn">Apply</button>
                     </div>
                     <div class="bg-white rounded-xl p-4 mt-8">
                         <ol class="list-decimal my-3 text-xl font-semibold p-4" id="select-items"></ol>
@@ -210,9 +210,21 @@
 
                     </div>
                     <div class="absolute -mt-7">
-                        <button disabled = 'disabled'
-                            class="btn text-xl text-white rounded-xl items-center justify-center font font-semibold bg-comon-color w-72 py-3 lg:ml-12 " id="makePurchaseBtn">Make
+                        <button onclick="my_modal_5.showModal()" disabled = 'disabled'
+                            class="btn text-xl text-white rounded-xl items-center justify-center font font-semibold bg-comon-color w-72 py-3 lg:ml-12 " id="makePurchaseBtn" >Make
                             Purchase</button>
+                            
+                            <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle text-center justify-center">
+                                <form method="dialog" class="modal-box w-[450px]">
+                                    <img class="mx-auto" src="images/congo.png" alt="">
+                                  <h3 class="font-bold text-lg">Congratulations</h3>
+                                  <p class="py-4">Your Purchase the product</p>
+                                  <div class="modal-action">
+                                    <button onclick="goHome()" class="btn text-white bg-comon-color items-center">Go Home</button>
+                                  </div>
+                                </form>
+                              </dialog>
+
                     </div>
                 </div>
             </div>
